@@ -1,16 +1,6 @@
 package usecase
 
-import org.apache.spark.SparkContext
-import scala.io.Source
-import java.io.{ FileReader, FileNotFoundException, IOException }
-import org.apache.spark.sql.SQLContext
-import org.apache.spark.sql.Row
-import org.apache.spark.sql.types.{ StructType, StructField, StringType, IntegerType };
-import scala.collection.mutable.ListBuffer
-import org.apache.spark.sql.SparkSession
-import org.apache.hadoop.log.LogLevel
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.SaveMode
+
 
 object OverLapSolution {
   
