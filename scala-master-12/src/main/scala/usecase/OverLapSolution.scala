@@ -46,7 +46,8 @@ object OverLapSolution {
                           controlMap -= (x._1)
                       }else{}
             }  
-           })           outputZipList += new ZipCodeRange(rangeList.min,rangeList.max)
+           })           
+           outputZipList += new ZipCodeRange(rangeList.min,rangeList.max)
       }
     })    
     outputZipList.foreach(f => println(f.startZip+" - "+f.endZip))        
@@ -54,12 +55,9 @@ object OverLapSolution {
 
   
   def generateData(): List[ZipCodeRange] = {
-    val sparkSession = SparkSession.builder
-      .master("local")
-      .appName("Overlapsolution")
-      .getOrCreate()
-    sparkSession.sparkContext.setLogLevel("ERROR")  
-    sparkSession
+    val zipCodeRangeList : scala.collection.mutable.ListBuffer[ZipCodeRange] = scala.collection.mutable.ListBuffer.empty[ZipCodeRange]
+    // add element
+    zipCodeRangeList.toList
   }
   
 }
